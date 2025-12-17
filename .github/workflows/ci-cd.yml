@@ -74,7 +74,7 @@ jobs:
         run: npm test
   # Задача сборки и деплоя проекта
   publish-gpr:
-    needs: install
+    needs: [install, test_linux, test_windows, test_macos]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -83,7 +83,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: '18'
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm publish
