@@ -25,7 +25,7 @@
 ## Intro
 This is a quick example project to show how a test environment can be setup in Node.js
 
-It includes the following 
+It includes the following
 
 - [Mocha](http://mochajs.org/) - *testing framework*
 - [Chai](http://chaijs.com/) - *assertion library*
